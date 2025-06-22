@@ -9,8 +9,18 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get("test",function(){
-    return ["Total Schemes"=>27596,"Total Completed Schemes"=>18556];
+    return [
+        [
+        "Total Schemes"=>27596,
+        "Total Completed Schemes"=>18556,
+        "Total Non Started Schemes"=>18556,
+       "Total Started Schemes"=>153
+        ],
+        [
+        "District Name"=>"Bajali",
+         "Handed Over"=>140,
+         "Functional"=>66,
+         "Partially Functional"=>88
+        ]
+    ];
 });
-
-Route::get('students',[StudentController::class,'list']);
-

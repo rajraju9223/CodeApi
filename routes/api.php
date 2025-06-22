@@ -8,6 +8,8 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::get("test",function(){
-    return ["name"=>"rajuraj","channel"=>"youtube"];
+    return ["Total Schemes"=>27596,"Total Completed Schemes"=>18556];
+
+    
 });
 
